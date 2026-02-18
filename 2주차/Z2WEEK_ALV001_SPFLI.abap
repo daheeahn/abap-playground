@@ -5,13 +5,13 @@
 *&---------------------------------------------------------------------*
 REPORT Z2WEEK_ALV001_SPFLI.
 
-TABLES:     spfli.                                 "MM 모듈의 구매오더 테이블. 구매하는 것을 입력. 헤더. 하지만 이 테이블 없기 떄문에, ekko -> scarr로 수정할거다.
+TABLES:     spfli.                                 
 
 TYPE-POOLS: slis.                                 "ALV Declarations
 
 *Data Declaration: 데이터 담기 (엑셀에 첫 행 구성)
 *----------------
-TYPES: BEGIN OF t_spfli,                           "ekpo는 아이템. 무엇을 구매했는지.
+TYPES: BEGIN OF t_spfli,                           
   carrid      TYPE spfli-carrid,
   connid      TYPE spfli-connid,
   fltime      TYPE spfli-fltime,
