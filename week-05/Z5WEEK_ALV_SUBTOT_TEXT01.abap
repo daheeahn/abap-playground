@@ -58,8 +58,6 @@ START-OF-SELECTION.
 *----------------------------------------------------------------------*
 FORM build_fieldcatalog.
 
-
-
   fieldcatalog-fieldname   = 'CARRID'.
   fieldcatalog-seltext_m   = '항공사 코드'.
   fieldcatalog-col_pos     = 0.
@@ -230,8 +228,7 @@ FORM subtotal_text CHANGING
                p_subtot_text TYPE slis_subtot_text.
 * Patient Level Text
 *  IF p_subtot_text-criteria = 'CARRID'.
-*    p_subtot_text-display_text_for_subtotal
-*                 = 'Patient Total'(011).
+*    p_subtot_text-display_text_for_subtotal = '항공사 소계'.
 *  ENDIF.
 
 **  Material Group Text
