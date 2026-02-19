@@ -37,20 +37,14 @@ TYPES: BEGIN OF t_sf,
 
  END OF t_sf.
 
-DATA: it_sf TYPE STANDARD TABLE OF t_sf,
-      wa_sf TYPE t_sf.
+DATA: it_sf TYPE STANDARD TABLE OF t_sf.
 
 *ALV data declarations
 DATA: fieldcatalog TYPE slis_t_fieldcat_alv WITH HEADER LINE,
-      gd_tab_group TYPE slis_t_sp_group_alv,
       gd_layout    TYPE slis_layout_alv,
       gd_repid     LIKE sy-repid.
 DATA: it_sort      TYPE slis_t_sortinfo_alv WITH HEADER LINE.
-*Alv Event
-DATA: gt_events TYPE slis_t_event,
-      ls_event TYPE slis_alv_event.
 
-*DATA : t TYPE slis_t_sp_group_alv .
 ************************************************************************
 *Start-of-selection.
 START-OF-SELECTION.
@@ -157,7 +151,6 @@ FORM display_alv_report.
       is_layout                = gd_layout
       it_fieldcat              = fieldcatalog[]
       it_sort                  = it_sort[]
-      it_events                = gt_events[]
       i_save                   = 'X'
     TABLES
       t_outtab                 = it_sf
